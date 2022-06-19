@@ -1,6 +1,3 @@
-# 노마더 코더 리액트 기초강의 실습편
-영화 소개 
-
 
 # Getting Started with Create React App
 
