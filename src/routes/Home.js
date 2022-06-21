@@ -23,9 +23,6 @@ function Home() {
         getMovies();
     }, [])
 
-
-    console.log(movies)
-
     return (
         <div>
             {loading? <h1>Loading.....</h1> :
@@ -33,9 +30,10 @@ function Home() {
                     {movies.map((movie) => (
                         <Moive
                             key={movie.id}
+                            id={movie.id}
                             coverImage={movie.medium_cover_image}
                             title = {movie.title}
-                            summary={movie.summary}
+                            summary={movie.summary != null ? movie.summary : ""}
                             genres={movie.genres}
                         />
                     ))}
