@@ -1,12 +1,13 @@
-
+import {Link} from "react-router-dom";
 
 function Main(){
-    return (
+    return(
         <div>
-            <h1>Main</h1>
+            <ul>
+                <li><Link to={"movies"}>영화</Link></li>
+            </ul>
         </div>
     )
 }
 
 export default Main;
-

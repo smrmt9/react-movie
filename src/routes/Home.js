@@ -1,6 +1,5 @@
 import {useEffect, useState} from "react";
 import Moive from "../components/MovieComponent";
-import {Col, Container, Row} from "react-bootstrap";
 import style from "./Home.module.css"
 
 function Home() {
@@ -16,6 +15,7 @@ function Home() {
     const getMovies = async() => {
         const response = await fetch("https://yts.mx/api/v2/list_movies.json?minimum_rating=9&sort_by=year");
         const json = await response.json();
+        console.log(json)
         setMovies(json.data.movies);
         setLoading(false);
 

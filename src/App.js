@@ -5,22 +5,29 @@ import {
 } from "react-router-dom"
 import Home from "./routes/Home";
 import Detail from "./routes/Detail";
-import Main from "./routes/Main"
-import {} from "bootstrap";
+import Main from "./routes/Main";
+import Books from "./routes/Books";
 
 function App() {
   return(
       <Router>
           <Switch>
-              <Route path="/movie/:id">
-                <Detail/>
+              <Route exact path="/">
+                  <Main/>
               </Route>
               <Route path="/movies">
                 <Home/>
               </Route>
-              <Route path="/">
-                  <Main/>
+              <Route path="/movie/:id">
+                  <Detail/>
               </Route>
+              <Route path="/books">
+                <Books/>
+              </Route>
+              <Route path="/book/:id">
+                  <Detail/>
+              </Route>
+
           </Switch>
       </Router>
   )

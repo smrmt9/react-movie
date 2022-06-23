@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import {Link} from "react-router-dom";
 import {Card} from "react-bootstrap";
 import style from "./MovieComponent.module.css"
+
 function UniToHtml(str){
     return str.replaceAll('&#39;', '\'')
         .replaceAll('&nbsp', ' ')
