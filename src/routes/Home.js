@@ -1,5 +1,7 @@
 import {useEffect, useState} from "react";
 import Moive from "../components/MovieComponent";
+import {Col, Container, Row} from "react-bootstrap";
+import style from "./Home.module.css"
 
 function Home() {
     const [loading, setLoading] = useState(true);
@@ -24,19 +26,20 @@ function Home() {
     }, [])
 
     return (
-        <div>
-            {loading? <h1>Loading.....</h1> :
-                <div>
-                    {movies.map((movie) => (
-                        <Moive
-                            key={movie.id}
-                            id={movie.id}
-                            coverImage={movie.medium_cover_image}
-                            title = {movie.title}
-                            summary={movie.summary != null ? movie.summary : ""}
-                            genres={movie.genres}
-                        />
-                    ))}
+        <div className={style.container}>
+            {loading? <h1 className={style.loader}>Loading.....</h1> :
+                <div className={style.movies}>
+                {movies.map((movie) => (
+                    <Moive
+                        key={movie.id}
+                        id={movie.id}
+                        coverImage={movie.medium_cover_image}
+                        title = {movie.title}
+                        year = {movie.year}
+                        summary={movie.summary != null ? movie.summary : ""}
+                        genres={movie.genres}
+                    />
+                ))}
                 </div>
             }
         </div>

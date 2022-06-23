@@ -5,6 +5,8 @@ import {
 } from "react-router-dom"
 import Home from "./routes/Home";
 import Detail from "./routes/Detail";
+import Main from "./routes/Main"
+import {} from "bootstrap";
 
 function App() {
   return(
@@ -13,8 +15,11 @@ function App() {
               <Route path="/movie/:id">
                 <Detail/>
               </Route>
-              <Route path="/">
+              <Route path="/movies">
                 <Home/>
+              </Route>
+              <Route path="/">
+                  <Main/>
               </Route>
           </Switch>
       </Router>

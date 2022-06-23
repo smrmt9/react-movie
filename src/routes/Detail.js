@@ -1,6 +1,7 @@
 import {useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 import Moive from "../components/MovieComponent";
+import {Container} from "react-bootstrap";
 
 
 function Detail(){
@@ -23,19 +24,18 @@ function Detail(){
     },[]);
 
     return(
-        <div>
-            <h1>Detail</h1>
+        <Container>
             {loading ?
                 <h2>Loading ...... </h2> :
                 <Moive
                     id={movie.id}
                     coverImage={movie.medium_cover_image}
                     title={movie.title}
-                    summary={movie.summary != null ? movie.summary : "설명 없음"}
+                    summary={movie.description_full != null ? movie.description_full : "..."}
                     genres={movie.genres}
                 />
             }
-        </div>
+        </Container>
     );
 }
 
