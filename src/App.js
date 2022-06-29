@@ -12,22 +12,21 @@ function App() {
   return(
       <Router>
           <Switch>
-              <Route exact path="/">
-                  <Main/>
-              </Route>
-              <Route path="/movies">
+              <Route path="/react-movie/movies">
                 <Home/>
               </Route>
-              <Route path="/movie/:id">
+              <Route path="/react-movie/movie/:id">
                   <Detail/>
               </Route>
-              <Route path="/books">
+              <Route path="/react-movie/books">
                 <Books/>
               </Route>
-              <Route path="/book/:id">
+              <Route path="/react-movie/book/:id">
                   <Detail/>
               </Route>
-
+              <Route path="/react-movie">
+                  <Main/>
+              </Route>
           </Switch>
       </Router>
   )
